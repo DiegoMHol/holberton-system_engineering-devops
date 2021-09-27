@@ -1,2 +1,2 @@
 #!/bin/bash
-tr -d | grep -i [C-c] 
+tr -d C,c
