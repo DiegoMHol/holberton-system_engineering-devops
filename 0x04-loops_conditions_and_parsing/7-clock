@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#Bash script that print 10 times "Best school"
+hs=0
+min=0
+while [ $min -le 61 ]
+do
+	if [ $min -eq 0 ]
+	then
+		echo "Hour: $hs"
+		((hs++))
+		((min++))
+	elif [ $min -eq 60 ]
+	then
+		min=0
+	else
+		echo $min
+		((min++))
+	fi
+	if [ $hs -eq 13 ] && [ $min -eq 60 ]
+	then
+		break
+	fi
+done
