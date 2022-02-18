@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Bash script that print 10 times "Best school"
+
+filename='/etc/passwd'
+while read -r file
+do
+	echo "$file" | cut -d ":" -f1,3,6
+done < $filename
