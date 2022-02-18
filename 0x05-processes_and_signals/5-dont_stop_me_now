@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #Kill procces of ex 4
-kill $BASHPID
+PS=$(pgrep -f ./4-to_infinity_and_beyond)
+kill "$PS"
