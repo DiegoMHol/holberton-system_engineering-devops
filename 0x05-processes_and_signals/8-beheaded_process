@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Kill procces of ex 4
+PS=$(pgrep -f ./7-highlander)
+kill -9 "$PS"
