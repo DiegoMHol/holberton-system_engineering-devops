@@ -6,4 +6,4 @@ then
 else
 	domi="$2.$1"
 fi
-dig $domi | awk '/ANSWER SECTION:/ { getline; split($1, a, "."); print "The subdomain", a[1], "is a", $4 " record and points to", $5}'
+dig "$domi" | awk '/ANSWER SECTION:/ { getline; split($1, a, "."); print "The subdomain", a[1], "is a", $4 " record and points to", $5}'
