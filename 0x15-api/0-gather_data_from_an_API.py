@@ -9,9 +9,9 @@ if __name__ == "__main__":
 
     def req_user():
         """ Request the user from the JSONPlaceholder  """
-        users_JSONP = req.get('https://jsonplaceholder.typicode.com/users').json()
+        userjs = req.get('https://jsonplaceholder.typicode.com/users').json()
         user = {}
-        for elem in users_JSONP:
+        for elem in userjs:
             if elem["id"] == user_id:
                 user = dict(elem)
                 break
