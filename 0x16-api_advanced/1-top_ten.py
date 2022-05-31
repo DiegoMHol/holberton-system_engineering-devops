@@ -6,7 +6,7 @@ import requests
 def top_ten(subreddit):
     urlr = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     request = requests.get(urlr, headers={'User-agent': 'yourbot'},
-            allow_redirects=False, params={"limit": 10})
+                           allow_redirects=False, params={"limit": 10})
     if request.status_code == 200:
         first = request.json().get("data").get("children")
         for item in first:
